@@ -60,10 +60,8 @@ public class Book {
 		}
 		return p;
 	}
-	public void getDisplayText(){
-		System.out.println("Author: "+ author);
-		System.out.println("Title: "+ title);
-		System.out.println("Description: "+ description);
+	public String getDisplayText(){
+		return ("Author: "+ author +"\nTitle: "+ title+"\nDescription: "+ description);
 	}
 	
 	

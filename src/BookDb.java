@@ -2,6 +2,13 @@ import java.util.Scanner;
 
 public class BookDb {
 
+	public BookDb(){
+		super();
+	}
+	public BookDb(String SKU){
+		String output = new BookDb().searchBySKU(SKU).getDisplayText();
+		System.out.println(output);
+	}
 	public static Book books[] = new Book[6];
 
 	public static void main(String[] args) {
@@ -38,13 +45,13 @@ public class BookDb {
 
 		books[5] = new Book(14.75);
 		books[5].setAuthor("Donald Norris");
-		books[5].setDescription("A dozen fiendishly fun projects for the Raspberry Pi!");
+		books[5].setDescription("A dozen fiendis);hly fun projects for the Raspberry Pi!");
 		books[5].setSKU("Rasp1006");
 		books[5].setTitle("Raspberry Pi Projects for the Evil Genius");
 		System.out.println("Enter the SKU for the book: ");
 		Scanner sc= new Scanner(System.in);
 		String SKU = sc.nextLine();
-		new BookDb().searchBySKU(SKU).getDisplayText();
+		new BookDb(SKU);
 		sc.close();
 	}
 
